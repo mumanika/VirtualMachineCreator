@@ -1,0 +1,25 @@
+---
+
+- hosts: workers
+  gather_facts: no
+
+
+  tasks:
+          - name: copy
+            copy:
+                    src: ~/Mukul/AnsibleLoadAvg.sh
+                    dest: /home/AnsibleLoadAvg.sh
+                    owner: root
+                    group: root
+                    mode: '0744'
+
+          - name: Execute the shell script
+            shell: bash /home/AnsibleLoadAvg.sh 1
+            
+- hosts: localhost
+  gather_facts: no
+  
+  
+  tasks:
+          - name: Execute the shell script on the host machine
+            shell: bash ~/Mukul/AnsibleLoadAvg.sh 1
