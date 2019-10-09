@@ -11,6 +11,6 @@
 
 5. In order to run the Load average playbook, ensure that you have the password less SSH set up and then enter the hosts of the workers under the /etc/ansible/hosts file under the group [workers]. Once done, run the playbook using the command sudo ansible-playbook <scriptname>.
 
-Authors: Mukul Manikandan, Rahul Saxena
+Authors: Mukul Manikandan mmanika@ncsu.edu
 
 ############################### Readme file ###############################
